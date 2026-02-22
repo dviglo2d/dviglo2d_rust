@@ -1,0 +1,6 @@
+[package]
+name = "dviglo"
+edition = "2024"
+
+[dependencies]
+glam = { version = "0.32" }

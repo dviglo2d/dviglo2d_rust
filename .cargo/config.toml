@@ -1,0 +1,5 @@
+# https://doc.rust-lang.org/cargo/reference/config.html
+
+[build]
+# Выносим папку target из папки репозитория
+target-dir = "../target"
