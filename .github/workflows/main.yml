@@ -1,0 +1,42 @@
+name: Main
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+
+    name: 🐧
+
+    steps:
+    - name: Скачиваем репозиторий
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        path: repo
+
+    - name: Компилируем
+      shell: bash
+      run: |
+        # -C dir требует +nightly -Z unstable-options
+        cargo +nightly -Z unstable-options -C repo build --all-targets
+
+  windows:
+    runs-on: windows-latest
+
+    name: 🔲
+
+    steps:
+    - name: Скачиваем репозиторий
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        path: repo
+
+    - name: Компилируем
+      shell: bash
+      run: |
+        # -C dir требует +nightly -Z unstable-options
+        cargo +nightly -Z unstable-options -C repo build --all-targets
