@@ -3,4 +3,11 @@ name = "dviglo"
 edition = "2024"
 
 [dependencies]
-glam = { version = "0.32" }
+log = "0.4"
+#backtrace = "0.3"
+
+glam = "0.32" # Математика
+winit = "0.30" # Создание окна
+
+[dev-dependencies]
+env_logger = "*"

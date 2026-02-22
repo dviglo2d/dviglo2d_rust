@@ -1,10 +1,12 @@
-//use dviglo as dv;
+use dviglo as dv;
 //use dviglo::glam;
 
 struct Hello {
-  //  pos: glam::Vec2,
+    // pos: glam::Vec2,
 }
 
 fn main() {
-    dviglo::f();
+    env_logger::init();
+
+    dv::run();
 }

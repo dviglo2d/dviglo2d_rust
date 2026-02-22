@@ -6,7 +6,8 @@ set "this_dir=%~dp0"
 set "this_dir=%this_dir:~0,-1%"
 
 :: -C dir требует +nightly -Z unstable-options
-cargo +nightly -Z unstable-options -C "%this_dir%" build --all-targets 
+::cargo +nightly -Z unstable-options -C "%this_dir%" build --all-targets 
+cargo +nightly -Z unstable-options -C "%this_dir%" build --all-targets --release
 
 :: Ждём нажатие Enter перед закрытием консоли
 pause
