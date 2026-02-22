@@ -23,6 +23,12 @@ jobs:
         # -C dir требует +nightly -Z unstable-options
         cargo +nightly -Z unstable-options -C repo build --all-targets
 
+    - name: Запускаем тесты
+      shell: bash
+      run: |
+        # -C dir требует +nightly -Z unstable-options
+        cargo +nightly -Z unstable-options -C repo test --verbose
+
   windows:
     runs-on: windows-latest
 
@@ -40,3 +46,9 @@ jobs:
       run: |
         # -C dir требует +nightly -Z unstable-options
         cargo +nightly -Z unstable-options -C repo build --all-targets
+
+    - name: Запускаем тесты
+      shell: bash
+      run: |
+        # -C dir требует +nightly -Z unstable-options
+        cargo +nightly -Z unstable-options -C repo test --verbose
